@@ -1,0 +1,13 @@
+body
+{
+    background-color: black;
+    cursor: none;
+    overflow: hidden;
+
+}
+
+#myImage {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+}
