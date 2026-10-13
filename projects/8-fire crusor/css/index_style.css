@@ -1,13 +1,51 @@
+html
+{
+    cursor: none;
+    /* a finger drag moves the flame instead of panning the page, pinch zoom still works */
+    touch-action: pinch-zoom;
+}
+
 body
 {
     background-color: black;
     cursor: none;
     overflow: hidden;
+    margin: 0;
 
 }
 
 #myImage {
     width: 150px;
     height: 150px;
-    position: absolute;
+    position: fixed;
+    pointer-events: none;
+}
+
+.hint {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 24px;
+    margin: 0;
+    padding: 0 16px;
+    text-align: center;
+    color: #ccc;
+    font-family: sans-serif;
+    font-size: 16px;
+    pointer-events: none;
+    user-select: none;
+}
+
+.hint-touch {
+    display: none;
+}
+
+/* touch screens */
+@media (hover: none), (pointer: coarse) {
+    .hint-mouse {
+        display: none;
+    }
+    .hint-touch {
+        display: inline;
+    }
 }

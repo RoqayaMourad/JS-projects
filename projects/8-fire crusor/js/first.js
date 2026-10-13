@@ -1,9 +1,14 @@
 var img = document.getElementById("myImage");
 
-document.addEventListener("mousemove", function(e){
-    img.style.left = e.clientX;
-    img.style.top = e.clientY;
-});
+// pointer events work for mouse, touch and pen
+document.addEventListener("pointermove", moveFlame);
+document.addEventListener("pointerdown", moveFlame);
+
+function moveFlame(e){
+    // the image is position: fixed, so it uses viewport coordinates
+    img.style.left = e.clientX + "px";
+    img.style.top = e.clientY + "px";
+}
 
 /*
 can be written: 
