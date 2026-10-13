@@ -4,97 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS Projects</title>
+    <title>JavaScript Lab</title>
+    <meta name="description" content="A collection of JavaScript projects and UI experiments.">
     <link rel="shortcut icon" href="dist/img/javascript.svg" type="image/x-icon">
-    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="dist/css/style.css">
 </head>
 <body>
 
-    <header class="d-flex">
-        <div class="container text-center d-flex justify-content-center align-items-center">
-            <div class="logo">
-                  <h1>Vanilla Javascript Projects</h1>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div>
+                <h1 class="site-title">JavaScript <span class="site-title-mark">Lab</span></h1>
+                <p class="site-subtitle">A collection of JavaScript projects and UI experiments.</p>
             </div>
+            <a class="profile-link" href="https://github.com/RoqayaMourad">GitHub profile</a>
         </div>
     </header>
-    <section class="projects">
-    <div class="container pt-5">
-        <div class="row">
-         
-         <div class="col-lg-4 col-md-6 col-12">
-          <div class="card baseBlock">
-         <img class="card-img-top" data-src="" alt="100%x180" style="height: 180px; width: 100%; display: block;" src="dist/img/color-flipper.jpg" data-holder-rendered="true">
-         <div class="card-body text-center">
-           <h4 class="card-title">Color Flipper</h4>
-           <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error blanditiis quaerat, consequatur dolorem earum doloribus.</p>
-           <a href="./projects/1-color-flipper/index.html" target="_blank" class="btn">Preview</a>
-         </div>
-       </div>
-         </div>
-         <div class="col-lg-4 col-md-6 col-12">
-          <div class="card baseBlock">
-         <img class="card-img-top" data-src="" alt="100%x180" style="height: 180px; width: 100%; display: block;" src="dist/img/drumkit.jpg" data-holder-rendered="true">
-         <div class="card-body text-center">
-           <h4 class="card-title">Drum Kit</h4>
-           <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error blanditiis quaerat, consequatur dolorem earum doloribus.</p>
-           <a href="./projects/7-DrumKit/index.html" target="_blank" class="btn">Preview</a>
-         </div>
-       </div>
-         </div>
-         <div class="col-lg-4 col-md-6 col-12">
-            <div class="card baseBlock">
-           <img class="card-img-top" data-src="" alt="100%x180" style="height: 180px; width: 100%; display: block;" src="dist/img/counter.jpg" data-holder-rendered="true">
-           <div class="card-body text-center">
-             <h4 class="card-title">Counter</h4>
-             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error blanditiis quaerat, consequatur dolorem earum doloribus.</p>
-             <a href="./projects/2-counter/index.html" target="_blank" class="btn">Preview</a>
-           </div>
-         </div>
-           </div>
-         <div class="col-lg-4 col-md-6 col-12">
-            <div class="card baseBlock">
-           <img class="card-img-top" data-src="" alt="100%x180" style="height: 180px; width: 100%; display: block;" src="dist/img/todo.jpg" data-holder-rendered="true">
-           <div class="card-body text-center">
-             <h4 class="card-title">TODO list</h4>
-             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error blanditiis quaerat, consequatur dolorem earum doloribus.</p>
-             <a href="./projects/9-TODO list/index.html" target="_blank" class="btn">Preview</a>
-           </div>
-         </div>
-           </div>
-         <div class="col-lg-4 col-md-6 col-12">
-            <div class="card baseBlock">
-           <img class="card-img-top" data-src="" alt="100%x180" style="height: 180px; width: 100%; display: block;" src="dist/img/reviews.jpg" data-holder-rendered="true">
-           <div class="card-body text-center">
-             <h4 class="card-title">Review Slider</h4>
-             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error blanditiis quaerat, consequatur dolorem earum doloribus.</p>
-             <a href="./projects/3-reviews/index.html" target="_blank" class="btn">Preview</a>
-           </div>
-         </div>
-           </div>
-       
-         <div class="col-lg-4 col-md-6 col-12">
-            <div class="card baseBlock">
-           <img class="card-img-top" data-src="" alt="100%x180" style="height: 180px; width: 100%; display: block;" src="dist/img/firecursor.jpg" data-holder-rendered="true">
-           <div class="card-body text-center">
-             <h4 class="card-title">Fire Cursor</h4>
-             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error blanditiis quaerat, consequatur dolorem earum doloribus.</p>
-             <a href="./projects/8-fire crusor/index.html" target="_blank" class="btn">Preview</a>
-           </div>
-         </div>
-           </div>
-    </div>
+
+    <main class="container">
+        <section aria-labelledby="projects-title">
+            <h2 class="visually-hidden" id="projects-title">Projects</h2>
+            <!-- the cards are built from the project list in dist/js/script.js -->
+            <ul class="project-grid" id="project-grid"></ul>
+            <noscript>
+                <p class="no-script">The project list needs JavaScript. You can also browse the code on <a href="https://github.com/RoqayaMourad/JS-projects">GitHub</a>.</p>
+            </noscript>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <h2 class="footer-title">Credits</h2>
+            <ul class="credits">
+                <li>Drum Kit: background photo by <a href="https://www.pexels.com/photo/3721941/">Daniel Reche on Pexels</a>.</li>
+            </ul>
         </div>
- </section>
-  
+    </footer>
 
-</section>
-    
-<!-- comment -->
-
-    <script src="dist/js/jquery-3.6.0.min.js"></script>
-    <script src="dist/js/popper.min.js"></script>
-    <script src="dist/js/bootstrap.min.js"></script>
     <script src="dist/js/script.js"></script>
 </body>
 </html>
