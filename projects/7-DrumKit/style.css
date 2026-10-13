@@ -14,8 +14,10 @@ html {
   .keys {
     display: flex;
     flex: 1;
+    flex-wrap: wrap;
     min-height: 100vh;
     align-items: center;
+    align-content: center;
     justify-content: center;
   }
   
@@ -31,6 +33,14 @@ html {
     color: white;
     background: rgba(0,0,0,0.4);
     text-shadow: 0 0 .5rem black;
+    cursor: pointer;
+    user-select: none;
+    touch-action: manipulation;
+  }
+
+  .key:focus-visible {
+    outline: .3rem solid #ffc600;
+    outline-offset: .3rem;
   }
   
   .playing {
@@ -49,4 +59,12 @@ html {
     text-transform: uppercase;
     letter-spacing: .1rem;
     color: #ffc600;
+  }
+
+  /* three keys per row on small screens */
+  @media (max-width: 480px) {
+    .key {
+      width: 9rem;
+      margin: .6rem;
+    }
   }
