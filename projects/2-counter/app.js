@@ -6,20 +6,32 @@ let increaseBtn = document.querySelector(".increase");
 let value = document.getElementById("value");
 let numberValue = parseInt(document.getElementById("value").innerText); 
 
+// color follows the current value, zero keeps the default color from styles.css
+function updateColor() {
+  if (numberValue > 0) {
+    value.style.color = ("green")
+  } else if (numberValue < 0) {
+    value.style.color = ("red")
+  } else {
+    value.style.color = ("")
+  }
+}
+updateColor();
+
 decreaseBtn.addEventListener("click", function() {
   numberValue--;
   value.innerText = numberValue;
-  value.style.color = ("red")
+  updateColor();
   });
 resetBtn.addEventListener("click", function() {
   numberValue = 0;
   value.innerText = numberValue;
-
+  updateColor();
   });
 increaseBtn.addEventListener("click", function() {
   numberValue++;
   value.innerText  = numberValue;
-  value.style.color = ("green")
+  updateColor();
   });
 
 // // method two

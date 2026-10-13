@@ -70,8 +70,8 @@ nextBtn.addEventListener('click', function(){
 })
 prevBtn.addEventListener('click', function(){
   currentReview--
-  if(currentReview < reviews.length - 1 ){
-    currentReview = 0;
+  if(currentReview < 0 ){
+    currentReview = reviews.length - 1;
   }
   showReview();
 })
